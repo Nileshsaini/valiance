@@ -1,0 +1,47 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Valiance-Plot</title>
+	<!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+  	<style type="text/css">
+  		.header{
+  			color: #ee6e73;
+    		font-weight: 300;
+  		}
+  	</style>
+</head>
+<body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+
+<div class="container">
+	<div class="row">
+		<h3 class="header">Analysis of Pharmacist statistics march 2016</h3><hr>
+		<h5 class="header">Raw Data</h5>
+		<p>Raw data can be downloaded from <a href="#">here</a></p>
+		<b>The graphs below are plotted using Tableau.</b>
+		<h5 class="header">Required Pharmacist statistics As on 31st March, 2016</h5>
+		<img class="responsive-img" src="../static/images/Required.png">
+		<h5 class="header">Sanctioned Pharmacist statistics As on 31st March, 2016</h5>
+		<img class="responsive-img" src="../static/images/Sanctioned.png">
+		<h5 class="header">In Position Pharmacist statistics As on 31st March, 2016</h5>
+		<img class="responsive-img" src="../static/images/In Position.png">
+		<h5 class="header">Vacant Pharmacist statistics As on 31st March, 2016</h5>
+		<img class="responsive-img" src="../static/images/Vacant.png">
+		<h5 class="header">Shortfall Pharmacist statistics As on 31st March, 2016</h5>
+		<img class="responsive-img" src="../static/images/Shortfall.png">
+		<h5 class="header">All Features Pharmacist statistics As on 31st March, 2016</h5>
+		<iframe src="../static/images/All Features.png" width="800" height="610" scrolling="yes">
+		</iframe>
+		<!-- <h5 class="header">Vacant Pharmacist statistics As on 31st March, 2016</h5>
+		<img class="responsive-img" src="../static/images/Vacant.png"> -->
+
+	</div>
+</div>
+</body>
+</html>
