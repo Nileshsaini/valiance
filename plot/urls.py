@@ -5,4 +5,5 @@ from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    url(r'^$', 'plot.views.plot', name='plot'),]
+    url(r'^$', 'plot.views.plot', name='plot'),
+    url(r'^plotly/$', 'plot.views.plotly', name='plotly'),]
