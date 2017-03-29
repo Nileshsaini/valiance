@@ -25,7 +25,7 @@ SECRET_KEY = 'o7vrq-94_j=-@tp02m)6^!!t2#4e$56cwbg46_$a4iq9@0z$yy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['valiance.herokuapp.com']
 
 
 # Application definition
@@ -100,8 +100,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
+# STATIC_URL = '/static/'
+# STATIC_ROOT = 'static'
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'templates/static'),
+# )
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'templates/static'),
 STATIC_URL = '/static/'
-STATIC_ROOT = 'static'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'templates/static'),
-)
