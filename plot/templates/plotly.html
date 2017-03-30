@@ -23,12 +23,424 @@
 	<div class="row">
 		<h3 class="header">Analysis of Pharmacist statistics march 2016</h3><hr>
 		<h5 class="header">Raw Data</h5>
-		<p>Raw data can be downloaded from <a href="https://drive.google.com/file/d/0B8NFdWTiGoD7LUg5YU9VcXVPUkk/view">here</a></p>
-		<b>The graphs below are plotted using Plotly(Graphing library for python).</b>
-		<!-- <p>The graphs will take some time to load, please be patient.</p> -->
+		<p>Importing Data using <b>pandas</b>(python library).</p>
+				<table class="bordered striped centered responsive-table">
+<tbody><tr>
+<td>State/UT</td>
+<td>Category</td>
+<td>Required - [R] - (As on 31st March, 2016)</td>
+<td>Sanctioned - [S] - (As on 31st March, 2016)</td>
+<td>In Position - [P] - (As on 31st March, 2016)</td>
+<td>Vacant - [S-P] - (As on 31st March, 2016)</td>
+<td>Note of Vacant - [S-P] - (As on 31st March, 2016)</td>
+<td>Shortfall - [R-P] - (As on 31st March, 2016)</td>
+<td>Note of Shortfall - [R-P] - (As on 31st March, 2016)</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Andhra Pradesh</td>
+<td>193</td>
+<td>189</td>
+<td>154</td>
+<td>35</td>
+<td>NA</td>
+<td>39</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Arunachal Pradesh</td>
+<td>206</td>
+<td>NA</td>
+<td>89</td>
+<td>NA</td>
+<td>NA</td>
+<td>117</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Assam</td>
+<td>314</td>
+<td>276</td>
+<td>354</td>
+<td>NA</td>
+<td>**</td>
+<td>NA</td>
+<td>**</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Bihar</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>NA</td>
+<td>6</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Chhattisgarh</td>
+<td>494</td>
+<td>549</td>
+<td>408</td>
+<td>141</td>
+<td>NA</td>
+<td>86</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Goa</td>
+<td>9</td>
+<td>9</td>
+<td>7</td>
+<td>2</td>
+<td>NA</td>
+<td>2</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Gujarat</td>
+<td>450</td>
+<td>463</td>
+<td>418</td>
+<td>45</td>
+<td>NA</td>
+<td>32</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Haryana</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>NA</td>
+<td>0</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Himachal Pradesh</td>
+<td>51</td>
+<td>42</td>
+<td>22</td>
+<td>20</td>
+<td>NA</td>
+<td>29</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Jammu &amp; Kashmir</td>
+<td>59</td>
+<td>56</td>
+<td>112</td>
+<td>NA</td>
+<td>**</td>
+<td>NA</td>
+<td>**</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Jharkhand</td>
+<td>264</td>
+<td>264</td>
+<td>189</td>
+<td>75</td>
+<td>NA</td>
+<td>75</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Karnataka</td>
+<td>71</td>
+<td>78</td>
+<td>35</td>
+<td>43</td>
+<td>NA</td>
+<td>36</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Kerala</td>
+<td>149</td>
+<td>143</td>
+<td>153</td>
+<td>NA</td>
+<td>**</td>
+<td>NA</td>
+<td>**</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Madhya Pradesh</td>
+<td>436</td>
+<td>495</td>
+<td>428</td>
+<td>67</td>
+<td>NA</td>
+<td>8</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Maharashtra</td>
+<td>382</td>
+<td>498</td>
+<td>491</td>
+<td>7</td>
+<td>NA</td>
+<td>NA</td>
+<td>**</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Manipur</td>
+<td>52</td>
+<td>61</td>
+<td>61</td>
+<td>0</td>
+<td>NA</td>
+<td>NA</td>
+<td>**</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Meghalaya</td>
+<td>136</td>
+<td>137</td>
+<td>164</td>
+<td>NA</td>
+<td>**</td>
+<td>NA</td>
+<td>**</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Mizoram</td>
+<td>66</td>
+<td>NA</td>
+<td>50</td>
+<td>NA</td>
+<td>NA</td>
+<td>16</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Nagaland</td>
+<td>147</td>
+<td>114</td>
+<td>101</td>
+<td>13</td>
+<td>NA</td>
+<td>46</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Odisha</td>
+<td>561</td>
+<td>611</td>
+<td>574</td>
+<td>37</td>
+<td>NA</td>
+<td>NA</td>
+<td>**</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Punjab</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>NA</td>
+<td>0</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Rajasthan</td>
+<td>274</td>
+<td>103</td>
+<td>42</td>
+<td>61</td>
+<td>NA</td>
+<td>232</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Sikkim</td>
+<td>12</td>
+<td>10</td>
+<td>4</td>
+<td>6</td>
+<td>NA</td>
+<td>8</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Tamil Nadu</td>
+<td>86</td>
+<td>89</td>
+<td>65</td>
+<td>24</td>
+<td>NA</td>
+<td>21</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Telangana</td>
+<td>116</td>
+<td>99</td>
+<td>77</td>
+<td>22</td>
+<td>NA</td>
+<td>39</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Tripura</td>
+<td>52</td>
+<td>104</td>
+<td>65</td>
+<td>39</td>
+<td>NA</td>
+<td>NA</td>
+<td>**</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Uttarakhand</td>
+<td>33</td>
+<td>13</td>
+<td>18</td>
+<td>NA</td>
+<td>**</td>
+<td>15</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Uttar Pradesh</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>State</td>
+<td>West Bengal</td>
+<td>404</td>
+<td>177</td>
+<td>83</td>
+<td>94</td>
+<td>NA</td>
+<td>321</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Union Territories</td>
+<td>A&amp; N Islands</td>
+<td>5</td>
+<td>9</td>
+<td>6</td>
+<td>3</td>
+<td>NA</td>
+<td>NA</td>
+<td>**</td>
+</tr>
+<tr>
+<td>Union Territories</td>
+<td>Chandigarh</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>NA</td>
+<td>0</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Union Territories</td>
+<td>D &amp; N Haveli</td>
+<td>7</td>
+<td>9</td>
+<td>7</td>
+<td>2</td>
+<td>NA</td>
+<td>0</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Union Territories</td>
+<td>Daman &amp; Diu</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>NA</td>
+<td>0</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Union Territories</td>
+<td>Delhi</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>NA</td>
+<td>0</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Union Territories</td>
+<td>Lakshadweep</td>
+<td>7</td>
+<td>15</td>
+<td>15</td>
+<td>0</td>
+<td>NA</td>
+<td>NA</td>
+<td>**</td>
+</tr>
+<tr>
+<td>Union Territories</td>
+<td>Puducherry</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>NA</td>
+<td>0</td>
+<td>NA</td>
+</tr>
+</tbody></table>
+		<br>
+		<b>The graphs below are plotted using Plotly(Graphing library for python).</b><br>
+		<p>We focus our study area on the basis of these parameters: <br><b>Independent Parameters:</b> Required, Sanctioned, In Position.
+		<br><b>Depndent Parameters:</b> Vacant, Shortfall.</p>
 		<h5 class="header">Required Pharmacist statistics As on 31st March, 2016</h5>
 		<iframe src="../../static/required.html" width="840" height="610" scrolling="yes">
 		</iframe>
+		<p></p>
 		<h5 class="header">Sanctioned Pharmacist statistics As on 31st March, 2016</h5>
 		<iframe src="../../static/sanctioned.html" width="840" height="610" scrolling="yes">
 		</iframe>
@@ -41,8 +453,14 @@
 		<h5 class="header">Shortfall Pharmacist statistics As on 31st March, 2016</h5>
 		<iframe src="../../static/shortfall.html" width="840" height="610" scrolling="yes">
 		</iframe>
-		<h5 class="header">All Features Pharmacist statistics As on 31st March, 2016</h5>
+		<h5 class="header">All Features Comparison</h5>
 		<iframe src="../../static/allFeatures.html" width="840" height="610" scrolling="yes">
+		</iframe>
+		<h5 class="header">Note of Vacant As on 31st March, 2016</h5>
+		<iframe src="../../static/note_of_vacant.html" width="840" height="610" scrolling="yes">
+		</iframe>
+		<h5 class="header">Note of Shortfall As on 31st March, 2016</h5>
+		<iframe src="../../static/note_of_shortfall.html" width="840" height="610" scrolling="yes">
 		</iframe>
 
 	</div>
